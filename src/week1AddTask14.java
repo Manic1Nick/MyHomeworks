@@ -8,7 +8,7 @@ public class week1AddTask14 {
 		System.out.println("Input six-digit number:");
 		int number = sc.nextInt();
 		
-		if (number < 100000 || number > 999999) {
+		if (number < 100000 || number >= 999999) {
 			System.out.println("Number must be six-digit !!!");
 		} else {
 			int number1 = number % 10;
