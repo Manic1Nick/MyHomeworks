@@ -18,8 +18,9 @@ public class week1AddTask12 {
 			} else {
 				if (speed >= 9 && speed <= 18) {
 				System.out.println(3);
-				} 
-				System.out.println(4);
+				} else {
+					System.out.println(4);
+				}
 			}
 		}
 	}
