@@ -220,10 +220,10 @@ public class ArrayUtils {
 
     public static int[] splitArray(int[] arr, int start, int end) {
 
-        int[] split = new int[end - start + 1];
+        int[] split = new int[end - start];
 
         for(int i = 0; i < split.length; i++) {
-            split[i] = arr[start - 1 + i];
+            split[i] = arr[start + i];
         }
         return split;
     }
