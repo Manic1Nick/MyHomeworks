@@ -2,6 +2,9 @@ package week2;
 
 import java.util.Scanner;
 
+ /*10) public static int[] splitArray(int[] arr, int start, int end)
+    { // обрезать массив по границам start и end}*/
+
 public class Week2Task10 {
 
     public static void main(String[] args) {

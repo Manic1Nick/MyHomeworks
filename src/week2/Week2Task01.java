@@ -2,6 +2,8 @@ package week2;
 
 import java.util.Scanner;
 
+/*1) найти минимальное и максимальное значения в массиве и вывести их на консоль*/
+
 public class Week2Task01 {
 
     public static void main(String[] args) {

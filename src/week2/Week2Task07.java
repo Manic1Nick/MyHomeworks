@@ -2,6 +2,9 @@ package week2;
 
 import java.util.Scanner;
 
+/*7) Вывести в консоль элементы той половины одномерного массива
+    у которой среднее арифметическое максимальное*/
+
 public class Week2Task07 {
 
     public static void main(String[] args) {

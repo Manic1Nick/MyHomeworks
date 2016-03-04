@@ -28,9 +28,6 @@ public class ArrayUtils {
     }
 
 
-
-
-
     /*1) найти минимальное и максимальное значения в массиве и вывести их на консоль*/
 /*
     public static void findMinMax(int[] mas) {
@@ -78,8 +75,6 @@ public class ArrayUtils {
         }
         return maxIndex;
     }
-
-
 
 
 
@@ -134,8 +129,6 @@ public class ArrayUtils {
     }
 
 
-
-
     /*3) Заданы два массива одинаковой длины с любыми значениями
     скопировать данные из первого массива во второй*/
 
@@ -167,8 +160,6 @@ public class ArrayUtils {
     }
 
 
-
-
     /*4) Посчитать сколько цифр(цифра задается пользователем) в массиве*/
 
     public static int countNumInMas(int number, int[] mas) {
@@ -183,7 +174,6 @@ public class ArrayUtils {
 
         return count;
     }
-
 
 
     /*5) Заполнить массив случайными значениями. На четных индексах парные значения, на нечетных непарные*/
@@ -236,8 +226,6 @@ public class ArrayUtils {
     }
 
 
-
-
     /*6) Найти среднее арифметическое массива*/
 /*
     public static int resAverageOfMas(int[] mas) {
@@ -264,8 +252,6 @@ public class ArrayUtils {
 
         return (sum / mas.length);
     }
-
-
 
 
 
@@ -325,7 +311,6 @@ public class ArrayUtils {
             System.out.print(mas[i] + ", ");
         }
     }
-
 
 
 
@@ -438,9 +423,6 @@ public class ArrayUtils {
 
         return res;
     }
-
-
-
 
 
 

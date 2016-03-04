@@ -2,6 +2,9 @@ package week2;
 
 import java.util.Scanner;
 
+ /*3) Заданы два массива одинаковой длины с любыми значениями
+    скопировать данные из первого массива во второй*/
+
 public class Week2Task03 {
 
     public static void main(String[] args) {

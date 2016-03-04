@@ -2,6 +2,8 @@ package week2;
 
 import java.util.Scanner;
 
+/*6) Найти среднее арифметическое массива*/
+
 public class Week2Task06 {
 
     public static void main(String[] args) {

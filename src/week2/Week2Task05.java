@@ -2,6 +2,8 @@ package week2;
 
 import java.util.Scanner;
 
+/*5) Заполнить массив случайными значениями. На четных индексах парные значения, на нечетных непарные*/
+
 public class Week2Task05 {
 
     public static void main(String[] args) {

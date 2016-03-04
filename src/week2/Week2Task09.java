@@ -2,6 +2,9 @@ package week2;
 
 import java.util.Scanner;
 
+/*9) Задать два массива случайными числами от 25 до 75.
+    Определить у какого из массивов больше парных елементов.*/
+
 public class Week2Task09 {
 
     public static void main(String[] args) {

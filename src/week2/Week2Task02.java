@@ -2,6 +2,8 @@ package week2;
 
 import java.util.Scanner;
 
+/*2) Поменять местами наибольший и наименьший элементы в массиве*/
+
 public class Week2Task02 {
 
     public static void main(String[] args) {

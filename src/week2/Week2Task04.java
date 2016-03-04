@@ -2,6 +2,8 @@ package week2;
 
 import java.util.Scanner;
 
+/*4) Посчитать сколько цифр(цифра задается пользователем) в массиве*/
+
 public class Week2Task04 {
 
     public static void main(String[] args) {

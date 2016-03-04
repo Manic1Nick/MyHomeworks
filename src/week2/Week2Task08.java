@@ -2,6 +2,9 @@ package week2;
 
 import java.util.Scanner;
 
+/*8) Eсть два массива одинаковой длины arr1 и arr2 вывести в консоль значения массива,
+	   который получается в результате суммы arr1[i] + arr2[i]*/
+
 public class Week2Task08 {
 
     public static void main(String[] args) {
