@@ -23,7 +23,9 @@ public class Week3Task39 {
         MatrixUtils.printMatrix(matrix3);
     }
 
-    /*Умножить 2 матрицы (количество строк первой РАВНО количеству столбцов второй!!!)*/
+    /*Умножить 2 матрицы (количество столбцов первой РАВНО количеству строк второй!!!
+    https://en.wikipedia.org/wiki/Matrix_multiplication
+    */
 
     public static int[][] multiplay2Matrix(int[][] matrix1, int[][] matrix2) {
 
