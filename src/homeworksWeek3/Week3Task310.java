@@ -9,7 +9,8 @@ public class Week3Task310 {
     public static void main(String[] args) {
 
         String line = StringUtils.enterStringLine();
-        Week3Task310.deleteSameWordsInLine(line);
+        System.out.println("\nLine without similar words is:\n" + StringUtils.deleteSameWordsInLine(line));
+
     }
 
     /*Поиск и удаление слов которые повторяются*/
@@ -30,7 +31,6 @@ public class Week3Task310 {
                 res += lineParts[i] + " ";
             }
         }
-        System.out.println("\nLine without similar words is:\n" + res);
         return res;
     }
 }
