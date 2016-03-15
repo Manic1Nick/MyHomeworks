@@ -298,6 +298,43 @@ public class MatrixUtils {
         return matrix3;
     }
 
+    /*Поворот квадратной матрицы на заданный угол, кратный 90 градусов*/
+
+    public static int[][] turnSquareMatrix(int[][] matrix) {
+
+        if (matrix.length != matrix[0].length) {
+            System.out.println("Number of rows must be equals number of columns!\n");
+            return null;
+        }
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input angle by multiples of 90 degrees: ");
+        int angle = sc.nextInt();
+
+        if (angle %90 != 0) {
+            System.out.println("The angle must be multiples of 90 degrees!\n");
+            return null;
+        }
+
+        int[][] res = new int[matrix.length][matrix.length];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (angle == 90 || angle %(90 + 360) == 0) {
+                    res[i][j] = matrix[matrix.length - 1 - j][i];
+                } else if (angle == 180 || angle %(180 + 360) == 0) {
+                    res[i][j] = matrix[matrix.length - 1 - i][matrix.length - 1 - j];
+                } else if (angle == 270 || angle %(270 + 360) == 0) {
+                    res[i][j] = matrix[j][matrix.length - 1 - i];
+                } else if (angle == 360 || angle %(360) == 0) {
+                    res[i][j] = matrix[i][j];
+                }
+            }
+        }
+        return res;
+    }
+
+
     /*Создать числовую матрицу с заданными количеством строк, столбцов, и рангом
     Записать в матрицу в четные строки случайные четные значения,
     в нечетные строки - случайные нечетные значения*/
