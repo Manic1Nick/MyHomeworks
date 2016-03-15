@@ -73,7 +73,7 @@ public class StringUtils {
 
     public static boolean checkPassLowerUpper(String pass) {
 
-        boolean res = (!pass.equals(pass.toLowerCase()) ||
+        boolean res = (!pass.equals(pass.toLowerCase()) &&
                        !pass.equals(pass.toUpperCase())) ? true : false ;
         return res;
     }
