@@ -73,8 +73,8 @@ public class StringUtils {
 
     public static boolean checkPassLowerUpper(String pass) {
 
-        boolean res = (pass.equals(pass.toLowerCase()) ||
-                       pass.equals(pass.toUpperCase())) ? true : false ;
+        boolean res = (!pass.equals(pass.toLowerCase()) ||
+                       !pass.equals(pass.toUpperCase())) ? true : false ;
         return res;
     }
 
@@ -111,7 +111,7 @@ public class StringUtils {
                 pass += possible.charAt((int)Math.floor(Math.random() * possible.length()));
             }
 
-            if (checkPassNumbersIncl(pass) == false) {
+            if (StringUtils.checkPassNumbersIncl(pass) == false) {
                 i = 0;
             }
         }
