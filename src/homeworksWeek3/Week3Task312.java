@@ -67,19 +67,21 @@ public class Week3Task312 {
             System.out.println("\nIf you are satisfied with this password, enter Y." +
                     "\nIf you are not satisfied with this password, you can try generate random password," +
                     "\nFor generate random password enter ANY key exception Y:\n");
-        } else {
-            System.out.println("\nYour attempts over. Password will be generate random." +
-                    "\nEnter ANY key exception Y for continue:\n");
-        }
+            if (!sc.next().equalsIgnoreCase("y"))  {
+                pass = StringUtils.genRandomPass();
+            }
 
-        if (!sc.next().equalsIgnoreCase("y"))  {
+        } else {
+            System.out.println("\nYour attempts over. Password will be generate random.");
             pass = StringUtils.genRandomPass();
         }
         System.out.println("Your password is: " + pass);
 
+
+
 /*      А так последний блок почему-то не получился........
 
-        String answer = sc.next();
+        String answer = sc.next();w
 
         if (!answer.equals("Y") || !answer.equals("y"))  {
             pass = StringUtils.genRandomPass();
