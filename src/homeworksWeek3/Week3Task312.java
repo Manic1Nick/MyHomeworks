@@ -18,47 +18,74 @@ public class Week3Task312 {
 
         Scanner sc = new Scanner(System.in);
         String pass = "";
+        int attempts = 2;
 
-        for (int i = 0; i < 2; ) {
-            System.out.println("Input password from 8 to 20 symbols: ");
+        for (int i = 0; i < attempts; ) {
+
+            if (i == 0) {
+                System.out.println("\nYou have " + attempts + " attempts.");
+            }
+
+            if (i == 1) {
+                System.out.println("\nTry again! But you have only 1 attempt");
+            }
+
+            System.out.println("\nInput password from 8 to 20 symbols: ");
             pass = sc.nextLine();
 
             if (StringUtils.checkPassLength(pass, 8, 20) == false) {
-                System.out.println("Password must be from 8 to 20 symbols! Try again");
+                System.out.println("Password must be from 8 to 20 symbols!");
                 i++;
             } else {
 
                 if (StringUtils.checkPassLowerUpper(pass) == false) {
-                    System.out.println("Password must have lower and upper letters! Try again");
+                    System.out.println("Password must have lower and upper letters!");
                     i++;
                 } else {
 
                     if (StringUtils.checkPassNumbersIncl(pass) == false) {
-                        System.out.println("Password must have numbers! Try again");
+                        System.out.println("Password must have numbers!");
                         i++;
                     } else {
 
                         if (StringUtils.checkPassWordsIncl(pass) == false) {
-                            System.out.println("Password must not have words 'password', 'pass', 'gfhjkm'! Try again");
+                            System.out.println("Password must not have words 'password', 'pass', 'gfhjkm'!");
                             i++;
                         } else {
 
                             System.out.println("Your password is: " + pass);
-                            i = 2;
+                            i = attempts;
+                            attempts = 0;
                         }
                     }
                 }
             }
-            System.out.println("\nIf you are satisfied with this password, enter Y." +
-                            "\nIf you are not satisfied with this password, you can try generate random password," +
-                            "\nFor generate enter ANY key exception Y:\n");
-            String answer = sc.nextLine();
 
-            if (!answer.equals("Y"))  {
-                pass = StringUtils.genRandomPass();
-            }
+        }
+
+        if (attempts == 0) {
+            System.out.println("\nIf you are satisfied with this password, enter Y." +
+                    "\nIf you are not satisfied with this password, you can try generate random password," +
+                    "\nFor generate random password enter ANY key exception Y:\n");
+        } else {
+            System.out.println("\nYour attempts over. Password will be generate random." +
+                    "\nEnter ANY key exception Y for continue:\n");
+        }
+
+        if (!sc.next().equalsIgnoreCase("y"))  {
+            pass = StringUtils.genRandomPass();
         }
         System.out.println("Your password is: " + pass);
+
+/*      А так последний блок почему-то не получился........
+
+        String answer = sc.next();
+
+        if (!answer.equals("Y") || !answer.equals("y"))  {
+            pass = StringUtils.genRandomPass();
+        }
+        System.out.println("Your password is: " + pass);
+        */
     }
 
     public static boolean checkPassLength(String pass, int minLength, int maxLength) {
