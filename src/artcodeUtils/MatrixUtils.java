@@ -363,6 +363,23 @@ public class MatrixUtils {
     }
 
 
+    /*МОРСКОЙ БОЙ : Создание поля боя*/
+
+    public static int[][] genField(int side) {
+
+        int[][] field = new int[side][side];
+        int count = 1;
+
+        for (int i = 0; i < side; i++) {
+            for (int j = 0; j < side; j++) {
+                field[i][j] = count++;       /*визуально поле будет состоять из цифр от 1 до 9, от 1 до 16, и т.д.*/
+            }
+        }
+        return field;
+
+    }
+
+
 
 
     /*Ввод данных в массив*/
