@@ -19,7 +19,8 @@ public class Week3Task313 {
         System.out.println("The map is: ");
         MatrixUtils.printMatrix(field);
 
-        int ship = (int) (Math.round(Math.random() * (side * side)));
+        int ship = (int) (Math.round(Math.random() * (side * side)));   /*Корабль пока что только однопалубный,
+                                                                          в будущем ожидается расширение флота :)*/
         int fire = 0;
         int count = 0;
 
