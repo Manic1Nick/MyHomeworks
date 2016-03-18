@@ -49,8 +49,7 @@ public class Week3Task312 {
 
     public static boolean checkPassLength(String pass, int minLength, int maxLength) {
 
-        int length = pass.length();
-        boolean res = length >= minLength && length <= maxLength;
+        boolean res = pass.length() >= minLength && pass.length() <= maxLength;
         if (res == false) {
             System.out.println("Password must be from 8 to 20 symbols!");
         }
@@ -69,11 +68,8 @@ public class Week3Task312 {
 
     public static boolean checkPassNumbersIncl(String pass) {
 
-        int length = pass.length();
-
         for (int i = 0; i < 10; i++) {
-            String x = i + "";
-            boolean res = (pass.substring(0, length).contains(x)) ? true : false ;
+            boolean res = (pass.substring(0, pass.length()).contains(i + "")) ? true : false ;
             if (res == true) {
                 return res;
             }
@@ -84,7 +80,6 @@ public class Week3Task312 {
 
     public static boolean checkPassWordsIncl(String pass) {
 
-        int length = pass.length();
         boolean res = (!pass.contains("password") || !pass.contains("pass") || !pass.contains("gfhjkm")) ? true : false ;
         if (res == false) {
             System.out.println("Password must not have words 'password', 'pass', 'gfhjkm'!");
