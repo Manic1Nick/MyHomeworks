@@ -19,14 +19,17 @@ public class Week3Task36 {
         System.out.println("\nLine is: ");
         ArrayUtils.printMas(line);
 
-        MatrixUtils.findMaxChairOf0(line);
-        MatrixUtils.findMaxChairOf1(line);
+        int[] resMax0 = MatrixUtils.findMaxChairOf0(line);
+        int[] resMax1 = MatrixUtils.findMaxChairOf1(line);
+
+        System.out.println("\n\n(" + resMax0[0] + ", " + resMax0[1] + ") - max chair of 0");
+        System.out.println("\n\n(" + resMax1[0] + ", " + resMax1[1] + ") - max chair of 1");
     }
 
 
     /*Найти самую длинную непрерывную цепочку 0 в последовательности цифр*/
 
-    public static void findMaxChairOf0(int[] line) {
+    public static int[] findMaxChairOf0(int[] line) {
 
         int iBegin = 0;
         int iEnd = 0;
@@ -43,13 +46,13 @@ public class Week3Task36 {
             iEnd = count > maxCount ? i + 1 : iEnd;
             iBegin = count > maxCount ? i + 2 - count : iBegin;
         }
-        System.out.println("\n\n(" + iBegin + ", " + iEnd + ") - max chair of 0");
-
+        int[] res = {iBegin, iEnd};
+        return res;
     }
 
     /*Найти самую длинную непрерывную цепочку 1 в последовательности цифр*/
 
-    public static void findMaxChairOf1(int[] line) {
+    public static int[] findMaxChairOf1(int[] line) {
 
         int iBegin = 0;
         int iEnd = 0;
@@ -66,6 +69,7 @@ public class Week3Task36 {
             iEnd = count > maxCount ? i + 1 : iEnd;
             iBegin = count > maxCount ? i + 2 - count : iBegin;
         }
-        System.out.println("\n(" + iBegin + ", " + iEnd + ") - max chair of 1");
+        int[] res = {iBegin, iEnd};
+        return res;
     }
 }

@@ -234,7 +234,7 @@ public class MatrixUtils {
 
     /*Найти самую длинную непрерывную цепочку 0 в последовательности цифр*/
 
-    public static void findMaxChairOf0(int[] line) {
+    public static int[] findMaxChairOf0(int[] line) {
 
         int iBegin = 0;
         int iEnd = 0;
@@ -251,14 +251,13 @@ public class MatrixUtils {
             iEnd = count > maxCount ? i + 1 : iEnd;
             iBegin = count > maxCount ? i + 2 - count : iBegin;
         }
-        System.out.println("\n\n(" + iBegin + ", " + iEnd + ") - max chair of 0");
-
+        int[] res = {iBegin, iEnd};
+        return res;
     }
-
 
     /*Найти самую длинную непрерывную цепочку 1 в последовательности цифр*/
 
-    public static void findMaxChairOf1(int[] line) {
+    public static int[] findMaxChairOf1(int[] line) {
 
         int iBegin = 0;
         int iEnd = 0;
@@ -275,7 +274,8 @@ public class MatrixUtils {
             iEnd = count > maxCount ? i + 1 : iEnd;
             iBegin = count > maxCount ? i + 2 - count : iBegin;
         }
-        System.out.println("\n(" + iBegin + ", " + iEnd + ") - max chair of 1");
+        int[] res = {iBegin, iEnd};
+        return res;
     }
 
     /*Умножить 2 матрицы (количество строк первой РАВНО количеству столбцов второй!!!)*/

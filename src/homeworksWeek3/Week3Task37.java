@@ -9,11 +9,16 @@ import java.util.Scanner;
 public class Week3Task37 {
 
     public static void main(String[] args) {
+
         String line = StringUtils.enterStringLine();
-        StringUtils.findMaxWordInLine(line);
+        String word = StringUtils.findMaxWordInLine(line);
+        System.out.println("\nMust bigger word is \"" + word + "\"");
     }
 
+    /*Ввод строки стринг с консоли*/
+
     public static String enterStringLine() {
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Input some words in the line: ");
         String line = sc.nextLine();
@@ -30,7 +35,6 @@ public class Week3Task37 {
         for (int i = 0; i < lineParts.length; i++) {
             word = lineParts[i].length() > word.length() ? lineParts[i] : word ;
         }
-        System.out.println("\nMust bigger word is \"" + word + "\"");
         return word;
     }
 }

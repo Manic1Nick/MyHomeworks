@@ -23,21 +23,22 @@ public class StringUtils {
         for (int i = 0; i < lineParts.length; i++) {
             word = lineParts[i].length() > word.length() ? lineParts[i] : word ;
         }
-        System.out.println("\nMust bigger word is " + word);
         return word;
     }
 
-    /*Изменить начальную букву в каждом слове строки на заглавную и вывести на печать*/
+    /*Изменить начальную букву в каждом слове строки на заглавную*/
 
-    public static void upperFirstLetterInEachWord(String line) {
+    public static String upperFirstLetterInEachWord(String line) {
 
         String[] lineParts = line.split(" ");
+        String res = "";
 
         for (int i = 0; i < lineParts.length; i++) {
             lineParts[i] = lineParts[i].substring(0, 1).toUpperCase() +
                     lineParts[i].substring(1, lineParts[i].length());
-            System.out.print(lineParts[i] + " ");
+            res += lineParts[i] + " ";
         }
+        return res;
     }
 
     /*Поиск и удаление слов которые повторяются*/
@@ -68,6 +69,9 @@ public class StringUtils {
 
         int length = pass.length();
         boolean res = length >= minLength && length <= maxLength;
+        if (res == false) {
+            System.out.println("Password must be from 8 to 20 symbols!");
+        }
         return res;
     }
 
@@ -75,6 +79,9 @@ public class StringUtils {
 
         boolean res = (!pass.equals(pass.toLowerCase()) &&
                        !pass.equals(pass.toUpperCase())) ? true : false ;
+        if (res == false) {
+            System.out.println("Password must have lower and upper letters!");
+        }
         return res;
     }
 
@@ -89,6 +96,7 @@ public class StringUtils {
                 return res;
             }
         }
+        System.out.println("Password must have numbers!");
         return false;
     }
 
@@ -96,6 +104,9 @@ public class StringUtils {
 
         int length = pass.length();
         boolean res = (!pass.contains("password") || !pass.contains("pass") || !pass.contains("gfhjkm")) ? true : false ;
+        if (res == false) {
+            System.out.println("Password must not have words 'password', 'pass', 'gfhjkm'!");
+        }
         return res;
     }
 
