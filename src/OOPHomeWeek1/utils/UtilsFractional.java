@@ -1,4 +1,6 @@
-package OOPHomeWeek1;
+package OOPHomeWeek1.utils;
+
+import OOPHomeWeek1test3.model.Fractional;
 
 public class UtilsFractional {
 
@@ -31,8 +33,8 @@ public class UtilsFractional {
         return denominator;
     }
 
-    //generate new random fractional number with reduction
-    public static Fractional genRandomFractNum(int numerator, int denominator) {
+    //fractional number with reduction
+    public static Fractional fractionalFractNum(int numerator, int denominator) {
 
         if (denominator % numerator == 0) {
             denominator /= numerator;
@@ -57,7 +59,7 @@ public class UtilsFractional {
             denominator /= numerator;
             numerator = 1;
         } else {
-            for (int i = 10; i < 0; i--) {
+            for (int i = 10; i > 0; i--) {
                 if (denominator / numerator == i) {
                     numerator /= i;
                     denominator /= i;

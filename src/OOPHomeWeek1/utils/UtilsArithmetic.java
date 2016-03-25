@@ -1,4 +1,4 @@
-package OOPHomeWeek1;
+package OOPHomeWeek1.utils;
 
 public class UtilsArithmetic {
 
