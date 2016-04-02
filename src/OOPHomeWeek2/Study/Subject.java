@@ -1,4 +1,4 @@
-package OOPHomeWeek2;
+package OOPHomeWeek2.Study;
 
 public class Subject {
 
